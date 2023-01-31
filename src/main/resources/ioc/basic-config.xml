@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="address" class="com.whizlabs.spring.beginner.ioc.containerandbean.Address">
+        <!-- collaborators and configuration for this bean go here -->
+        <constructor-arg index="0" value="100"/>
+        <constructor-arg index="1" value="Akpakpa"/>
+    </bean>
+
+    <bean id="person" class="com.whizlabs.spring.beginner.ioc.containerandbean.Person">
+        <!-- collaborators and configuration for this bean go here -->
+        <property name="fullName" value="John Doe"/>
+        <property name="address" ref="address"/>
+    </bean>
+
+    <!-- more bean definitions go here -->
+
+</beans>
